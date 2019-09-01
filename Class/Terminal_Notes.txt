@@ -1,5 +1,37 @@
 Notes on Terminal Commands
 
+-pwd: shows the current working directory/folder
+
 -ls: lists every file/folder in directory
 
--cd: creates directory
+-ls -a : lists every file/folder/hidden files in directory
+
+-cd [folder name]: changes directory to the [folder name] folder
+
+-cd .. : go up a directory
+
+-cd ../../[folder name]: moves up list of directories until [folder name]
+
+-cd ~ : goes to root directory
+
+-mkdir [name]: makes new directory
+
+-rm [name] : removes file [name]
+
+-rm -r [folder_name] : removes folder [folder_name]
+
+-cp [file1] [file2] : copies file1 to file2
+
+-cp -r [folder 1] [folder 2] : copies folder 1 to folder 2
+
+-vi [name].txt : opens text file
+
+-clear : clears terminal
+
+-ssh -X username@[IP ADDRESS] : log into computer with IP ADDRESS
+
+-ssh -X username@elsa.hpc.tcnj.edu : log into ELSA High Performance Cluster
+
+
+
+
