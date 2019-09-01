@@ -1,0 +1,13 @@
+vi Commands
+
+i : insert; edit a file
+
+esc : escape editing mode
+
+:# : brings you to line # in a file
+
+:w : writes/saves file
+
+:q : quits vi
+
+:q! : quits vi without saving file
