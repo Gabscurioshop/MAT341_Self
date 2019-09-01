@@ -1,7 +1,21 @@
 Github Commands
 
-1. git add filename or folder name
+git clone <github-webaddress> : clones repositories to my computer
 
-2. git commit -m "notes for yourself"
+git pull : pulls everything from a folder
 
-3. git push
+How to log into github from terminal:
+
+1. git config --global user.email "email@" : enter email address
+2. git config --global user.name "github name" : enter username
+3. enter your password in popup window
+
+How to push files/folder into my github account:
+
+1. git add filename/folder name : adds current version of file/folder
+
+2. git commit -m "notes for yourself" : recent updates made to file/folder
+
+3. git push : uploads files/folder to github account
+
+
