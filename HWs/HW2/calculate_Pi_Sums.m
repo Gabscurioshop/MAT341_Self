@@ -3,34 +3,44 @@ function calculate_Pi_Sums()
 %until the following condition is met:
 %|aNA??|< tol and |bNB??|< tol
 
+%error tolerance
 tol = 1e-6;
-err =0;%conditional variable
-a_sum = 0;%sum for a
-b_sum = 0;%sum for b
+%initialize err =1 to get while loop
+err =1;
+%initialize coubter to zero
+n =0;
 
-a_N = 0; %sequence starts when k = 0,minimum value of a_N
-b_N=0; %sequence starts when k = 0, minimum value of b_N
 
-%find the sum for sequence a
-while err < tol
-   a_sum = a_sum + 6/sqrt(3) *(-1)^a_N/[(3^a_N)*(2*a_N+1)]
-   err = abs(a_sum - pi);
-   a_N = a_N + 1; %a_N increments for each iteration
-    
+while err > tol
+    n = n+1;
+    %compute sum for a_{n}
+    sumA = 0;
+    for k =0:n
+        sumA = sumA + 6/sqrt(3) *(-1)^k/[(3^k)*(2*k+1)];
+    end
+    %compare a{n} to tol
+   err = abs(sumA - pi);
 end
-Na = a_N-1%while loop returns a_N+1, we are looking for a_N
+n;
 
-err = 0; %reset err back to 0 to handle summation of b
+n = 0; %clear n 
+err = 1; %reset err back to 0 to handle summation of b
 b1_sum = 0; %part 1 of summation formula for b
 b2_sum = 0; %part 2 of summation formula for b
 
-%find the sum for sequence b
-while err < tol
-   b1_sum = b1_sum + 16*(-1)^b_N/[5^(2*b_N+1)*(2*b_N+1)];
-   b2_sum = b2_sum + 4*(-1)^b_N/[239^(2*b_N+1)*(2*b_N+1)];
-   b_sum = b1_sum - b2_sum
-   err = abs(b_sum - pi);
-   b_N = b_N + 1; %b_N increments for each iteration
+while err >tol
+    n = n+1;
+%compute sum for b{n}
+    sumB= 0;
+    for k = 0:n
+        b1_sum = b1_sum + 16*(-1)^k/[5^(2*k+1)*(2*k+1)];
+        b2_sum = b2_sum + 4*(-1)^k/[239^(2*k+1)*(2*k+1)];
+        sumB = b1_sum - b2_sum;
+    end
+ %sumB = b1_sum - b2_sum
+    err = abs(sumB - pi);
+    %compare b{n} to tol
 end
-Nb = b_N-1%while loop returns b_N+1, we need b_N
+n
+
 
