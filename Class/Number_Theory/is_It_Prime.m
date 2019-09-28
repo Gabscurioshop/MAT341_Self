@@ -28,5 +28,3 @@ if isPrime == 1
 else
     str = 'number is not prime'
 end
-    
-
