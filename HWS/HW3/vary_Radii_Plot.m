@@ -1,6 +1,9 @@
 function vary_Radii_Plot()
 %this plots estimated probabilities for 
 %particular radius vs radius r
+%estimated probability 0.5 @ x = 0.29
+%estimated probability 0.1 @ x = 0.68
+%estimated probability 0.01 @ x = 0.90
 
 rVec= [0.01:0.005:0.10  0.1:0.01:0.5];
 
@@ -20,7 +23,3 @@ hold on; %this plots all the points calculated by the function
 %labels the axes
 xlabel('radius')
 ylabel('estimated probabillity')
-
-%estimated probability 0.5 @ x = 0.29
-%estimated probability 0.1 @ x = 0.68
-%estimated probability 0.01 @ x = 0.90
