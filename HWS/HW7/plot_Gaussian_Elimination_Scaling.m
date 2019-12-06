@@ -2,11 +2,11 @@ function plot_Gaussian_Elimination_Scaling()
 %this function plots the number of arithmetic functiond needed to row
 %reduce an N x N matrix
 NVec = 2:1:100;
-len = length(NVec);%length of errTolVec
+len = length(NVec);%length of NVec
 
 for i=1:len
-    %calculates probability for each error tolerance in vector
-    x(i) = NVec(i);%gets the element at index i in errTolVec
+    %calculates probability for each matrix size in vector
+    x(i) = NVec(i);%gets the element at index i in NVec
     opsVec(i) =  go_Go_Gaussian_Elimination(x(i));
     %number of matrix operations
 end
